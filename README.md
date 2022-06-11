@@ -1,4 +1,4 @@
-# Poot-ModTemplate
+# MOD SOS:PoOT Bahasa Indonesia
 A mod template for Story of Seasons - Pioneers of Olive Town
 
 This Template REQUIRES the use of Poot Mod Helper. You can get it here: https://github.com/gurrenm3/Poot-Mod-Helper/releases.
