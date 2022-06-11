@@ -11,4 +11,8 @@
   <ItemGroup>
     <EmbeddedResource Include="poot.targets" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Lib.Harmony" Version="2.2.1" />
+  </ItemGroup>
 </Project>
