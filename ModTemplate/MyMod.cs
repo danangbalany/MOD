@@ -35,8 +35,6 @@ namespace ModTemplate
         {
             // this is an example of using Mod Helper events.
             // For this event, any code in here will automatically run when Main Menu is shown.
-            
         }
-    
     }
 }

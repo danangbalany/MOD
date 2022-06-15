@@ -1,24 +1,16 @@
 ﻿using BokuMono;
-using Il2CppSystem;
-using Il2CppSystem.Collections.Generic;
+using BokuMono.Data;
+using HarmonyLib;
 
-namespace PootModHelper.Api
+namespace ModTemplate.Harmony_Patches
 {
-    /// <summary>
-    /// Extension methods for <see cref="LocalizeTextProvider"/>.
-    /// </summary>
-    public static class LocalizeTextProviderExtensions
+    [HarmonyPatch(typeof(PlayerRecoveryMasterData), nameof(PlayerRecoveryMasterData.GetRecoveryRate))]
+    class Patch
     {
-        /// <summary>
-        /// Returns a List containing all TextData for the provided <see cref="LocalizeTextTableType"/>.
-        /// </summary>
-        /// <param name="textProvider"></param>
-        /// <param name="tableType"></param>
-        /// <returns></returns>
-        public static List<LocalizeTextData> GetLocalizeTextData(this LocalizeTextProvider textProvider, LocalizeTextTableType tableType)
+        static void Postfix(PlayerRecoveryMasterData __instance)
         {
-            var textTable = textProvider.GetTextTable(LocalizeTextTableType.ActionGuideText);
-            return textTable?.list;
+            //This changes the time that the player wakes up to 6:00 AM, regardless of when they went to sleep. 
+            __instance.WakeUpTime = "6:00";
         }
     }
 }
